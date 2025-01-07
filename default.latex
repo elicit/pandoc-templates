@@ -14,6 +14,12 @@ $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
 \usepackage{xcolor}
+\usepackage{enotez}
+\setenotez{
+  backref = true,
+  list-name = {Supporting Quotations},
+}
+\let\footnote=\endnote
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
@@ -92,6 +98,9 @@ $if(has-frontmatter)$
 \mainmatter
 $endif$
 $body$
+
+\newpage
+\printendnotes
 
 $if(has-frontmatter)$
 \backmatter
