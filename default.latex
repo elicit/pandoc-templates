@@ -20,9 +20,7 @@ $endif$
   list-name = {Supporting Quotations},
 }
 \let\footnote=\endnote
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
+\usepackage[left=1in, right=1in]{geometry}
 \usepackage{amsmath,amssymb}
 $--
 $-- section numbering
